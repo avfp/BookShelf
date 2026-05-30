@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BookShelf — Nurturing the brain</title>
+<title>BookShelf — nurturing the brain</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 /* ── RESET & BASE ── */
@@ -49,13 +49,13 @@ body {
   padding: 3rem 2.5rem;
   width: 100%;
   max-width: 400px;
-  box-shadow: 4px 4px 0 var(--border);
+  box-shadow: 4px 4px 0 var(--sage-light);
 }
 .auth-box h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   text-align: center;
-  color: var(--accent);
+  color: var(--sage);
   margin-bottom: .25rem;
 }
 .auth-subtitle {
@@ -82,7 +82,7 @@ body {
   color: var(--muted);
 }
 .auth-switch span {
-  color: var(--accent);
+  color: var(--asage);
   cursor: pointer;
   font-weight: 500;
 }
@@ -122,7 +122,7 @@ body {
 .btn {
   display: inline-block;
   padding: .72rem 1.5rem;
-  background: var(--accent);
+  background: var(--sage);
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -138,10 +138,10 @@ body {
 .btn-sm { padding: .45rem 1rem; font-size: .82rem; }
 .btn-outline {
   background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
+  color: var(--sage);
+  border: 1px solid var(--sage);
 }
-.btn-outline:hover { background: var(--accent); color: #fff; }
+.btn-outline:hover { background: var(--sage); color: #fff; }
 .btn-danger {
   background: var(--danger);
   color: #fff;
@@ -156,8 +156,8 @@ body {
 
 /* ── HEADER ── */
 header {
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
+  background: var(--sage_light);
+  border-bottom: 1px solid var(--sage-mid);
   padding: .85rem 2rem;
   display: flex;
   align-items: center;
@@ -169,7 +169,7 @@ header {
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--sage);
   flex: 1;
 }
 .logo em { font-style: italic; }
@@ -186,7 +186,7 @@ header {
   font-family: 'DM Sans', sans-serif;
   transition: all .2s;
 }
-.btn-logout:hover { border-color: var(--accent); color: var(--accent); }
+.btn-logout:hover { border-color: var(--sage); color: var(--sage); }
 
 /* ── MAIN LAYOUT ── */
 .main {
@@ -201,8 +201,8 @@ header {
   gap: 2rem;
   margin-bottom: 1.75rem;
   padding: 1rem 1.5rem;
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--bluegrey-light);
+  border: 1px solid var(--bluegrey-mid);
   border-radius: 2px;
   flex-wrap: wrap;
   align-items: center;
@@ -211,7 +211,7 @@ header {
 .stat-num {
   font-family: 'Playfair Display', serif;
   font-size: 1.7rem;
-  color: var(--accent);
+  color: var(--blue-grey);
   line-height: 1;
 }
 .stat-lbl {
@@ -258,8 +258,8 @@ header {
   color: var(--muted);
   transition: all .2s;
 }
-.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-.filter-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+.filter-btn.active { background: var(--blue-grey); color: #fff; border-color: var(--blue-grey); }
+.filter-btn:hover:not(.active) { border-color: var(--sage); color: var(--sage); }
 .sort-select {
   padding: .42rem .85rem;
   border: 1px solid var(--border);
@@ -273,7 +273,7 @@ header {
 }
 .add-btn {
   padding: .6rem 1.25rem;
-  background: var(--accent);
+  background: var(--sage);
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -335,7 +335,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #ecdfc8 0%, #d4c4a8 100%);
+  background: linear-gradient(145deg, #d8e4d8 0%, #b8cfc2 100%);
   padding: 1rem;
   text-align: center;
   gap: .4rem;
@@ -343,7 +343,7 @@ header {
 .cover-ph-title {
   font-family: 'Playfair Display', serif;
   font-size: .8rem;
-  color: var(--accent);
+  color: #3d5c42;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -389,7 +389,7 @@ header {
   max-width: 540px;
   max-height: 92vh;
   overflow-y: auto;
-  box-shadow: 6px 6px 0 var(--border);
+  box-shadow: 6px 6px 0 var(--sage-light);
 }
 .modal-header {
   padding: 1.5rem 1.75rem 1rem;
@@ -405,7 +405,7 @@ header {
 .modal-header h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: var(--accent);
+  color: var(--sage);
 }
 .modal-close {
   background: none;
@@ -457,7 +457,7 @@ header {
 .detail-cover-ph {
   width: 100%;
   height: 180px;
-  background: linear-gradient(135deg, #ecdfc8, #d4c4a8);
+  background: linear-gradient(135deg, #d8e4d8, #b8cfc2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,7 +472,7 @@ header {
   margin-bottom: 1.25rem;
 }
 .meta-item {
-  background: var(--cream);
+  background: var(--sage-light);
   padding: .7rem 1rem;
   border-radius: 2px;
 }
@@ -484,8 +484,8 @@ header {
 }
 .meta-value { font-weight: 500; font-size: .9rem; margin-top: .15rem; }
 .detail-opinion {
-  background: var(--paper);
-  border-left: 3px solid var(--gold);
+  background: var(--bluegrey-light);
+  border-left: 3px solid var(--blue-grey);
   padding: .85rem 1.1rem;
   font-size: .88rem;
   line-height: 1.7;
@@ -523,7 +523,7 @@ header {
         </div>
         <button class="btn btn-full" onclick="doLogin()">sign in</button>
         <div class="auth-switch">
-          New here? <span onclick="showRegister()">sign up</span>
+          new here? <span onclick="showRegister()">sign up</span>
         </div>
       </div>
 
@@ -538,12 +538,12 @@ header {
           <input id="regPass" type="password" placeholder="at least 4 characters" autocomplete="new-password">
         </div>
         <div class="field">
-          <label>What would you like us to call you?</label>
+          <label>what would you like us to call you?</label>
           <input id="regName" type="text" placeholder="what would you like us to call you?">
         </div>
         <button class="btn btn-full" onclick="doRegister()">create account</button>
         <div class="auth-switch">
-          Already have an account? <span onclick="showLogin()">sign in</span>
+          already have an account? <span onclick="showLogin()">sign in</span>
         </div>
       </div>
     </div>
@@ -556,7 +556,7 @@ header {
 <div id="mainApp" class="hidden">
   <header>
     <div class="logo"><em>BookShelf</em></div>
-    <div class="header-user">Hii, <strong id="displayName"></strong></div>
+    <div class="header-user">hii, <strong id="displayName"></strong></div>
     <button class="btn-logout" onclick="doLogout()">sign out</button>
   </header>
 
