@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Libris — Mi Biblioteca Personal</title>
+<title>BookShelf — Nurturing the brain</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 /* ── RESET & BASE ── */
@@ -500,44 +500,44 @@ header {
 <div id="authScreen">
   <div class="auth-screen">
     <div class="auth-box">
-      <h1>📚 Libris</h1>
-      <p class="auth-subtitle">Tu diario de lectura personal</p>
+      <h1>BookShelf</h1>
+      <p class="auth-subtitle">personal reading diary</p>
 
       <div id="authErr" class="auth-err hidden"></div>
 
       <!-- LOGIN -->
       <div id="loginForm">
         <div class="field">
-          <label>Usuario</label>
-          <input id="loginUser" type="text" placeholder="tu nombre de usuario" autocomplete="username">
+          <label>username</label>
+          <input id="loginUser" type="text" placeholder="your username" autocomplete="username">
         </div>
         <div class="field">
-          <label>Contraseña</label>
+          <label>password</label>
           <input id="loginPass" type="password" placeholder="••••••••" autocomplete="current-password">
         </div>
-        <button class="btn btn-full" onclick="doLogin()">Entrar</button>
+        <button class="btn btn-full" onclick="doLogin()">sign in</button>
         <div class="auth-switch">
-          ¿No tienes cuenta? <span onclick="showRegister()">Regístrate</span>
+          New here? <span onclick="showRegister()">sign up</span>
         </div>
       </div>
 
       <!-- REGISTRO -->
       <div id="registerForm" class="hidden">
         <div class="field">
-          <label>Usuario</label>
-          <input id="regUser" type="text" placeholder="solo letras, números y _" autocomplete="username">
+          <label>username</label>
+          <input id="regUser" type="text" placeholder="only letters, numbers and _ are allowed" autocomplete="username">
         </div>
         <div class="field">
-          <label>Contraseña</label>
-          <input id="regPass" type="password" placeholder="mínimo 4 caracteres" autocomplete="new-password">
+          <label>password</label>
+          <input id="regPass" type="password" placeholder="at least 4 characters" autocomplete="new-password">
         </div>
         <div class="field">
-          <label>Nombre para mostrar</label>
-          <input id="regName" type="text" placeholder="¿cómo te llamamos?">
+          <label>What would you like us to call you?</label>
+          <input id="regName" type="text" placeholder="what would you like us to call you?">
         </div>
-        <button class="btn btn-full" onclick="doRegister()">Crear cuenta</button>
+        <button class="btn btn-full" onclick="doRegister()">create account</button>
         <div class="auth-switch">
-          ¿Ya tienes cuenta? <span onclick="showLogin()">Inicia sesión</span>
+          Already have an account? <span onclick="showLogin()">sign in</span>
         </div>
       </div>
     </div>
@@ -549,9 +549,9 @@ header {
      ════════════════════════════════ -->
 <div id="mainApp" class="hidden">
   <header>
-    <div class="logo"><em>Libris</em></div>
-    <div class="header-user">Hola, <strong id="displayName"></strong></div>
-    <button class="btn-logout" onclick="doLogout()">Cerrar sesión</button>
+    <div class="logo"><em>BookShelf</em></div>
+    <div class="header-user">Hii, <strong id="displayName"></strong></div>
+    <button class="btn-logout" onclick="doLogout()">sign out</button>
   </header>
 
   <div class="main">
@@ -560,22 +560,22 @@ header {
     <div class="stats-bar">
       <div class="stat">
         <div class="stat-num" id="statTotal">0</div>
-        <div class="stat-lbl">Libros</div>
+        <div class="stat-lbl">books</div>
       </div>
       <div class="stat">
         <div class="stat-num" id="statPages">0</div>
-        <div class="stat-lbl">Páginas totales</div>
+        <div class="stat-lbl">total pages</div>
       </div>
       <div class="stat">
         <div class="stat-num" id="statAvg">—</div>
-        <div class="stat-lbl">Rating medio</div>
+        <div class="stat-lbl">rating average</div>
       </div>
       <div class="stat">
         <div class="stat-num" id="statYear">0</div>
-        <div class="stat-lbl">Este año</div>
+        <div class="stat-lbl">this year</div>
       </div>
       <div class="stats-spacer"></div>
-      <button class="add-btn" onclick="openAddModal()">+ Añadir libro</button>
+      <button class="add-btn" onclick="openAddModal()">+ add book</button>
     </div>
 
     <!-- BUSCADOR, FILTROS Y ORDEN -->
@@ -585,12 +585,12 @@ header {
         <input
           type="text"
           id="searchInput"
-          placeholder="Buscar por título o autor…"
+          placeholder="search by title or author"
           oninput="renderBooks()"
         >
       </div>
       <div class="filter-group" id="ratingFilters">
-        <button class="filter-btn active" data-r="0" onclick="setFilter(this, 0)">Todos</button>
+        <button class="filter-btn active" data-r="0" onclick="setFilter(this, 0)">All</button>
         <button class="filter-btn" data-r="5" onclick="setFilter(this, 5)">★★★★★</button>
         <button class="filter-btn" data-r="4" onclick="setFilter(this, 4)">★★★★</button>
         <button class="filter-btn" data-r="3" onclick="setFilter(this, 3)">★★★</button>
@@ -600,10 +600,10 @@ header {
       <select class="sort-select" id="sortSelect" onchange="renderBooks()">
         <option value="alpha">A → Z</option>
         <option value="alpha-desc">Z → A</option>
-        <option value="date-desc">Más reciente primero</option>
-        <option value="date-asc">Más antiguo primero</option>
-        <option value="rating-desc">Mejor rating</option>
-        <option value="pages-desc">Más páginas</option>
+        <option value="date-desc">latest</option>
+        <option value="date-asc">oldest</option>
+        <option value="rating-desc">best ranking</option>
+        <option value="pages-desc">pages</option>
       </select>
     </div>
 
@@ -618,32 +618,32 @@ header {
 <div class="modal-overlay hidden" id="addModal">
   <div class="modal">
     <div class="modal-header">
-      <h2 id="modalTitle">Añadir libro</h2>
+      <h2 id="modalTitle">add book</h2>
       <button class="modal-close" onclick="closeModal('addModal')">✕</button>
     </div>
     <div class="modal-body">
       <input type="hidden" id="editId">
 
       <div class="field">
-        <label>Título *</label>
+        <label>title *</label>
         <input id="fTitle" type="text" placeholder="Título del libro">
       </div>
       <div class="field">
-        <label>Autor *</label>
+        <label>author *</label>
         <input id="fAuthor" type="text" placeholder="Nombre del autor">
       </div>
       <div class="form-row">
         <div class="field">
-          <label>Nº de páginas</label>
+          <label>nº of pages</label>
           <input id="fPages" type="number" placeholder="320" min="1">
         </div>
         <div class="field">
-          <label>Fecha de finalización</label>
+          <label>finishing date</label>
           <input id="fDate" type="date">
         </div>
       </div>
       <div class="field">
-        <label>Rating</label>
+        <label>rating</label>
         <div class="star-input" id="starInput">
           <span data-v="1" onclick="setStar(1)">★</span>
           <span data-v="2" onclick="setStar(2)">★</span>
@@ -653,27 +653,27 @@ header {
         </div>
       </div>
       <div class="field">
-        <label>Opinión / reseña</label>
+        <label>review/notes</label>
         <textarea id="fOpinion" placeholder="¿Qué te pareció el libro?"></textarea>
       </div>
       <div class="field">
-        <label>Portada — URL de imagen</label>
+        <label>image url</label>
         <input
           id="fImgUrl"
           type="text"
-          placeholder="https://ejemplo.com/portada.jpg"
+          placeholder="https://exemple.com/coverjpg"
           oninput="previewFromUrl()"
         >
       </div>
       <div class="field">
-        <label>Portada — subir imagen desde tu dispositivo</label>
+        <label>image upload</label>
         <input type="file" id="fImgFile" accept="image/*" onchange="handleImgFile()" style="font-size:.82rem">
-        <img id="imgPreview" class="img-preview hidden" src="" alt="Vista previa de portada">
+        <img id="imgPreview" class="img-preview hidden" src="" alt="view">
       </div>
 
       <div class="modal-actions">
-        <button class="btn btn-sm btn-outline" onclick="closeModal('addModal')">Cancelar</button>
-        <button class="btn btn-sm" onclick="saveBook()">Guardar libro</button>
+        <button class="btn btn-sm btn-outline" onclick="closeModal('addModal')">cancel</button>
+        <button class="btn btn-sm" onclick="saveBook()">save book</button>
       </div>
     </div>
   </div>
@@ -707,18 +707,18 @@ let editingRating = 0;    // rating seleccionado en el formulario
 // Cada usuario tiene sus propios libros separados.
 
 function getUsers() {
-  try { return JSON.parse(localStorage.getItem('libris_users') || '{}'); }
+  try { return JSON.parse(localStorage.getItem('bookshelf_users') || '{}'); }
   catch { return {}; }
 }
 function saveUsers(users) {
-  localStorage.setItem('libris_users', JSON.stringify(users));
+  localStorage.setItem('bookshelf_users', JSON.stringify(users));
 }
 function getBooks(user) {
-  try { return JSON.parse(localStorage.getItem('libris_books_' + user) || '[]'); }
+  try { return JSON.parse(localStorage.getItem('bookshelf_books_' + user) || '[]'); }
   catch { return []; }
 }
 function saveBooks(user, booksArr) {
-  localStorage.setItem('libris_books_' + user, JSON.stringify(booksArr));
+  localStorage.setItem('bookshelf_books_' + user, JSON.stringify(booksArr));
 }
 
 // ─── AUTENTICACIÓN ────────────────────────────────────────────────
@@ -744,10 +744,10 @@ function showLogin() {
 function doLogin() {
   const user = document.getElementById('loginUser').value.trim();
   const pass = document.getElementById('loginPass').value;
-  if (!user || !pass) { showErr('Por favor completa todos los campos.'); return; }
+  if (!user || !pass) { showErr('please fill all the info'); return; }
   const users = getUsers();
   if (!users[user] || users[user].pass !== btoa(pass)) {
-    showErr('Usuario o contraseña incorrectos.');
+    showErr('username or password incorrect');
     return;
   }
   hideErr();
@@ -758,14 +758,14 @@ function doRegister() {
   const user = document.getElementById('regUser').value.trim();
   const pass = document.getElementById('regPass').value;
   const name = document.getElementById('regName').value.trim() || user;
-  if (!user || !pass) { showErr('Por favor completa todos los campos.'); return; }
-  if (pass.length < 4) { showErr('La contraseña debe tener al menos 4 caracteres.'); return; }
+  if (!user || !pass) { showErr('please fill all the info'); return; }
+  if (pass.length < 4) { showErr('password must have 4 characters'); return; }
   if (!/^[a-zA-Z0-9_]+$/.test(user)) {
-    showErr('El usuario solo puede contener letras, números y guión bajo _');
+    showErr('username can only have letters, numbers and _');
     return;
   }
   const users = getUsers();
-  if (users[user]) { showErr('Ese nombre de usuario ya existe.'); return; }
+  if (users[user]) { showErr('the username already exists'); return; }
   users[user] = { pass: btoa(pass), name };
   saveUsers(users);
   hideErr();
@@ -866,7 +866,7 @@ function openEditModal(id) {
 function saveBook() {
   const title = document.getElementById('fTitle').value.trim();
   const author = document.getElementById('fAuthor').value.trim();
-  if (!title || !author) { alert('El título y el autor son obligatorios.'); return; }
+  if (!title || !author) { alert('title and author are mandatory'); return; }
 
   // Imagen: base64 (archivo subido) o URL
   const preview = document.getElementById('imgPreview');
@@ -952,10 +952,10 @@ function renderBooks() {
     grid.innerHTML = `
       <div class="empty-state">
         <div class="empty-icon">📖</div>
-        <h3>${books.length ? 'Sin resultados' : 'Añade tu primer libro'}</h3>
+        <h3>${books.length ? 'no results' : 'add your first book'}</h3>
         <p>${books.length
-          ? 'Prueba con otra búsqueda o cambia los filtros.'
-          : 'Pulsa el botón <strong>+ Añadir libro</strong> para empezar tu biblioteca.'
+          ? 'try another search'
+          : 'click on the buton <strong>+ add books</strong> to start your library'
         }</p>
       </div>`;
     return;
