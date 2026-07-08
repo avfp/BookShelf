@@ -587,7 +587,7 @@ header {
     <!-- BUSCADOR, FILTROS Y ORDEN -->
     <div class="toolbar">
       <div class="search-wrap">
-        <span class="search-icon">🔍</span>
+        <span class="search-icon"></span>
         <input
           type="text"
           id="searchInput"
@@ -957,7 +957,7 @@ function renderBooks() {
   if (!list.length) {
     grid.innerHTML = `
       <div class="empty-state">
-        <div class="empty-icon">📖</div>
+        <div class="empty-icon"></div>
         <h3>${books.length ? 'no results' : 'add your first book'}</h3>
         <p>${books.length
           ? 'try another search'
